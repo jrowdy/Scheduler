@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <body onload="startTime()">
         <head>
             <meta charset="UTF-8">
             <!--Import Google Icon Font-->
@@ -18,7 +18,9 @@
 
         <header>
             <h1 align="center">Work Day Scheduler</h1>
-            <h5 align="center">A simple calendar app for scheduling your work day. <br> Click inside of the green areas to schedule an event. Click the lock button when you are ready to save.</h5>
+            <h5 align="center">A simple calendar app for scheduling your work day. <br> Click inside of the green areas to schedule an event.  Purple/orchid boxes indicate that the hour slot has already passed. Click the lock button when you are ready to save.</h5>
+            <hr>
+            <h4 align="center" id="timeHead"> -Current Date & Time- <p align="center" id="date"></p> <div id="txt"></div></h4> 
         </header>
         <hr>
 
@@ -27,65 +29,73 @@
             
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">9:00 AM</div>
-                <div id="details" class="col s8"> <textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i> </button></div>
+                <div id="time8" class="col s1">8:00 AM</div>
+                <div id="details8" class="col s8 details"> <textarea id="text8"></textarea> </div>
+                <div id="button8" class="col s1"> <button id="lock8"> <i class="material-icons">lock</i> </button></div>
+                <div class="col s1"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col s1"></div>
+                <div id="time9" class="col s1">9:00 AM</div>
+                <div id="details9" class="col s8 details"> <textarea id="text9"></textarea> </div>
+                <div id="button9" class="col s1"> <button id="lock9"> <i class="material-icons">lock</i> </button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">10:00 AM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i></button></div>
+                <div id="time10" class="col s1">10:00 AM</div>
+                <div id="details10" class="col s8 details"><textarea id="text10"></textarea> </div>
+                <div id="button10" class="col s1"> <button id="lock10"> <i class="material-icons">lock</i></button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">11:00 AM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i></button></div>
+                <div id="time11" class="col s1">11:00 AM</div>
+                <div id="details11" class="col s8 details"><textarea id="text11"></textarea> </div>
+                <div id="button11" class="col s1"> <button id="lock11"> <i class="material-icons">lock</i></button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">12:00 PM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i></button></div>
+                <div id="time12" class="col s1">12:00 PM</div>
+                <div id="details12" class="col s8 details"><textarea id="text12"></textarea> </div>
+                <div id="button12" class="col s1"> <button id="lock12"> <i class="material-icons">lock</i></button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">1:00 PM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"><i class="material-icons">lock</i></button></div>
+                <div id="time13" class="col s1">13:00 PM</div>
+                <div id="details13" class="col s8 details"><textarea id="text13"></textarea> </div>
+                <div id="button13" class="col s1"> <button id="lock13"><i class="material-icons">lock</i></button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">2:00 PM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i></button></div>
+                <div id="time14" class="col s1">14:00 PM</div>
+                <div id="details14" class="col s8 details"><textarea id="text14"></textarea> </div>
+                <div id="button14" class="col s1"> <button id="lock14"> <i class="material-icons">lock</i></button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">3:00 PM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i></button></div>
+                <div id="time15" class="col s1">15:00 PM</div>
+                <div id="details15" class="col s8 details"><textarea id="text15"></textarea> </div>
+                <div id="button15" class="col s1"> <button id="lock15"> <i class="material-icons">lock</i></button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">4:00 PM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i> </button></div>
+                <div id="time16" class="col s1">16:00 PM</div>
+                <div id="details16" class="col s8 details"><textarea id="text16"></textarea> </div>
+                <div id="button16" class="col s1"> <button id="lock16"> <i class="material-icons">lock</i> </button></div>
                 <div class="col s1"></div>
             </div>
             <div class="row">
                 <div class="col s1"></div>
-                <div id="time" class="col s1">5:00 PM</div>
-                <div id="details" class="col s8"><textarea id="text"></textarea> </div>
-                <div id="button" class="col s1"> <button id="lock"> <i class="material-icons">lock</i> </button></div>
+                <div id="time17" class="col s1">17:00 PM</div>
+                <div id="details17" class="col s8 details"><textarea id="text17"></textarea> </div>
+                <div id="button17" class="col s1"> <button id="lock17"> <i class="material-icons">lock</i> </button></div>
                 <div class="col s1"></div>
             </div>
             
@@ -94,8 +104,10 @@
 
         </div>
 
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"               integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
             <script src="planner.js"></Script>
             <script type="text/javascript" src="materialize.min.js"></script>
+            
     </body>
 </html>
