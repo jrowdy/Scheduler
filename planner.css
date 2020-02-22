@@ -15,6 +15,12 @@ h5 {
     font-family: 'Comfortaa', cursive;
 }
 
+#timeHead, #date {
+    font-size: 16px;
+    font-family: 'Tomorrow', cursive;
+    margin: 2px; 
+}
+
 #time {
     background-color: rgb(246, 248, 116);
     height: 48px;
@@ -22,7 +28,7 @@ h5 {
     font-weight: bold;
 }
 
-#details {
+.details {
     background-color: rgb(151, 236, 95);
     height: 48px;
     font-family: 'Comfortaa', cursive;
@@ -56,7 +62,7 @@ h5 {
     cursor: pointer;
 }
 
-#lock {
+#lock8, #lock9, #lock10, #lock11, #lock12, #lock13, #lock14, #lock15, #lock16, #lock17, #lock18 {
     background-color: dodgerblue;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -68,7 +74,7 @@ h5 {
 
 .row {
     border-radius: 10px;
-    border: darkslategray solid 1px;
+    border: rgb(127, 153, 153) solid 1px;
     height: 50px;
     font-size: 20px;
     margin: 1px;
