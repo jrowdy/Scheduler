@@ -21,7 +21,7 @@ h5 {
     margin: 2px; 
 }
 
-#time {
+#time8, #time9, #time10, #time11, #time12, #time13, #time14, #time15, #time16, #time17, #time18  {
     background-color: rgb(246, 248, 116);
     height: 48px;
     font-family: 'Comfortaa', cursive;
@@ -52,7 +52,7 @@ h5 {
     margin-bottom: 2px;
 }
 
-#lock:hover {
+#lock8:hover, #lock9:hover, #lock10:hover, #lock11:hover, #lock12:hover, #lock14:hover, #lock15:hover, #lock16:hover, #lock17:hover {
     background-color: #170cb4;
     cursor: pointer;
 }
